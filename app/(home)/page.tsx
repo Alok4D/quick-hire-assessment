@@ -1,19 +1,13 @@
 
 import Intro from "./_components/Intro";
 import Image from "next/image";
-
-
-import Communities from "./_components/Communities";
-import FeaturedProjects from "./_components/Featured";
-import LatestNews from "./_components/News";
-import NewsLetter from "./_components/NewsLetter";
-import QualityServices from "./_components/QualityServices ";
-import ClientTestimonials from "./_components/Testimonial";
 import Footer from "./_components/Footer";
 import Navbar from "./_components/Navbar";
 import CompanyLogos from "./_components/CompanyLogos";
 import ExploreCategories from "./_components/ExploreCategories";
 import CallToAction from "./_components/CallToAction";
+import FeaturedJobs from "./_components/FeaturedJobs";
+import LatestJobs from "./_components/LatestJobs";
 
 
 export default function page() {
@@ -45,12 +39,8 @@ export default function page() {
       <CompanyLogos />
       <ExploreCategories />
       <CallToAction />
-      {/* <Communities /> */}
-      {/* <FeaturedProjects /> */}
-      {/* <QualityServices /> */}
-      {/* <ClientTestimonials /> */}
-      {/* <LatestNews /> */}
-      {/* <NewsLetter /> */}
+      <FeaturedJobs />
+      <LatestJobs />
       <Footer/>
     </>
   );
