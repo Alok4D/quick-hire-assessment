@@ -13,6 +13,7 @@ import Footer from "./_components/Footer";
 import Navbar from "./_components/Navbar";
 import CompanyLogos from "./_components/CompanyLogos";
 import ExploreCategories from "./_components/ExploreCategories";
+import CallToAction from "./_components/CallToAction";
 
 
 export default function page() {
@@ -43,6 +44,7 @@ export default function page() {
       </div>
       <CompanyLogos />
       <ExploreCategories />
+      <CallToAction />
       {/* <Communities /> */}
       {/* <FeaturedProjects /> */}
       {/* <QualityServices /> */}
