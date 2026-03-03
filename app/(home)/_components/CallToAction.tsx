@@ -1,10 +1,10 @@
-import React from 'react';
+
 import Image from 'next/image';
 
 export default function CallToAction() {
   return (
     // Outer section to provide spacing around the banner
-    <section className="w-full bg-white flex justify-center items-center py-16 lg:py-24">
+    <section className="w-full bg-white flex justify-center items-center py-6 lg:py-6">
       
       {/* Main Container locked to 1192px max-width */}
       <div className="relative max-w-[1192px] w-full lg:px-0 md:px-8">
