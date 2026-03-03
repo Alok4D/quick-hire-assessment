@@ -1,5 +1,4 @@
 
-import Footer from "./_components/footer/Footer";
 import Intro from "./_components/Intro";
 import Navbar from "./_components/navbar/Navbar";
 
@@ -9,6 +8,7 @@ import LatestNews from "./_components/News";
 import NewsLetter from "./_components/NewsLetter";
 import QualityServices from "./_components/QualityServices ";
 import ClientTestimonials from "./_components/Testimonial";
+import Footer from "./_components/Footer";
 
 
 export default function page() {
@@ -16,7 +16,6 @@ export default function page() {
     <>
       <Navbar />
       <Intro />
-
       <Communities />
       <FeaturedProjects />
       <QualityServices />
