@@ -72,16 +72,6 @@ export default function LatestJobs() {
 
   return (
     <section className="w-full bg-[#F8FAFE] flex justify-center items-center py-16 lg:py-24 relative overflow-hidden">
-      
-      {/* Optional: Subtle background lines replicating the design's background geometry */}
-      <div 
-        className="absolute inset-0 pointer-events-none opacity-50 hidden lg:block"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 150 L800 50 M800 400 L1600 200' stroke='%234640DE' stroke-width='1' fill='none' stroke-opacity='0.15'/%3E%3C/svg%3E")`,
-          backgroundSize: 'cover'
-        }}
-      ></div>
-
       <div className="max-w-[1192px] w-full lg:px-0 md:px-8 flex flex-col relative z-10">
         
         {/* Header Section */}
