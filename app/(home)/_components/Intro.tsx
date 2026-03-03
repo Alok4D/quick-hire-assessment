@@ -1,92 +1,100 @@
-import Container from "@/components/Container";
-import blobImage from "@/images/homepage/blob.png";
-import waveBottom from "@/images/homepage/wave-bottom.png";
-import wave from "@/images/homepage/wave.png";
-import tower from "@/images/homepage/tower.png";
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { LucideLetterText, LucideRabbit, LucideUsers } from "lucide-react";
+import { Search, MapPin, ChevronDown } from 'lucide-react';
+import Image from 'next/image';
 
-export default function Intro() {
+export default function HeroSection() {
   return (
-    <div className="min-h-screen relative bg-background overflow-hidden">
-      <Image
-        className="absolute left-0 top-0 pointer-events-none"
-        src={blobImage}
-        alt="blob"
-      />
-      <Image
-        className="absolute right-0 top-0 pointer-events-none"
-        src={waveBottom}
-        alt="wave"
-      />
-      <Image
-        className="absolute right-0 bottom-0 translate-y-1/3 pointer-events-none"
-        src={wave}
-        alt="wave"
-      />
-      <Image
-        className="absolute right-0 bottom-0 h-full object-contain pointer-events-none hidden lg:block max-w-lg"
-        src={tower}
-        alt="wave"
-      />
-      <div className="relative py-10 lg:py-44">
-        <Container>
-          <div className="max-w-3xl space-y-6">
-            <h1 className="font-bold text-white text-3xl lg:text-5xl xl:text-[66px] leading-tight">
-              Identify vacant homes rebuild neighborhoods create jobs
-            </h1>
-            <div className="max-w-lg text-gray-[#C0C0BF]">
-              <p>
-                One national platform that connects municipalities, contractors,
-                inspectors, buyers, sellers, and lenders to efficiently
-                rehabilitate vacant properties.
-              </p>
-            </div>
-            <div className="text-[#6666666a] space-x-4">
-              <Button size="lg">Get Early Access</Button>
-              <Button size="lg" variant="secondary">
-                View Demo
-              </Button>
-            </div>
-            <div className="p-1 bg-[#2f2f2e] md:space-x-4 flex flex-wrap rounded">
-              <input
-                type="text"
-                className="bg-[#424241] flex-1 h-14 text-white p-4 placeholder-white"
-                placeholder="Enter your email"
+    // Outer wrapper - now inheriting background from parent
+    <div className="w-full">
+      
+      {/* 2. Main Hero Content */}
+      <main className="w-full max-w-[1192px] mx-auto lg:px-0 md:px-8 flex-1 flex flex-col lg:grid lg:grid-cols-12 gap-10 items-center relative z-30">
+        
+        {/* Left Column: Text & Search */}
+        <div className="lg:col-span-7 flex flex-col justify-center w-full relative z-40 pt-10 lg:pt-20 pb-20">
+          
+          {/* Main Headline */}
+          <h1 className="text-[#202430] text-[48px] lg:text-[72px] font-bold leading-[1.05] tracking-tight">
+            Discover <br />
+            more than <br />
+            <span className="text-[#26A4FF] relative inline-block mt-2">
+              5000+ Jobs
+              {/* Custom SVG Scribble Underline */}
+              <svg className="absolute w-[115%] -bottom-4 left-0 text-[#26A4FF]" viewBox="0 0 350 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.5 12.5C40.5 7.5 125.5 -2.5 347.5 7.5M10.5 17.5C65.5 14.5 200.5 6.5 305.5 14.5" stroke="currentColor" strokeWidth="6" strokeLinecap="round"/>
+              </svg>
+            </span>
+          </h1>
+
+          {/* Subheadline Paragraph */}
+          <p className="text-[#515B6F] text-[18px] lg:text-[20px] leading-relaxed mt-10 max-w-[500px]">
+            Great platform for the job seeker that searching for new career heights and passionate about startups.
+          </p>
+
+          {/* Search Box Form */}
+          <div className="mt-10 bg-white p-4 shadow-[0px_20px_60px_rgba(46,51,90,0.08)] w-full max-w-[800px] flex flex-col lg:flex-row gap-4 lg:gap-0 items-center relative z-50 border border-[#D6DDEB]/50">
+            
+            {/* Job Title Input */}
+            <div className="flex-[1.2] flex items-center gap-3 px-4 w-full">
+              <Search className="text-[#A9B1C0]" size={24} />
+              <input 
+                type="text" 
+                placeholder="Job title or keyword" 
+                className="w-full outline-none text-[#202430] placeholder:text-[#A9B1C0] text-[16px] bg-transparent py-2"
               />
-              <select
-                className="bg-[#424241] flex-1 h-14 text-white p-4 placeholder-white"
-                defaultValue="Select your role"
-              >
-                <option disabled>Select your role</option>
-                <option value="buyer">Buyer</option>
-                <option value="seller">Seller</option>
-                <option value="contractor">Contractor</option>
-                <option value="inspector">Inspector</option>
-              </select>
-              <Button className="w-full md:w-auto" size="lg">
-                Subscribe
-              </Button>
             </div>
 
-            <div className="flex flex-wrap justify-start gap-4">
-              <div className="rounded bg-[#353534] p-6 min-w-54 max-w-54 flex flex-col items-center gap-2 text-sm">
-                <LucideRabbit className="fill-primary" />
-                <span>AI Tutor</span>
+            {/* Desktop Divider */}
+            <div className="hidden lg:block w-px h-10 bg-[#D6DDEB]"></div>
+
+            {/* Location Input */}
+            <div className="flex-1 flex items-center justify-between px-4 w-full border-t lg:border-t-0 border-[#D6DDEB] pt-4 lg:pt-0">
+              <div className="flex items-center gap-3 w-full">
+                <MapPin className="text-[#A9B1C0]" size={24} />
+                <input 
+                  type="text" 
+                  placeholder="Florence, Italy" 
+                  defaultValue="Florence, Italy"
+                  className="w-full outline-none text-[#202430] placeholder:text-[#A9B1C0] text-[16px] bg-transparent py-2"
+                />
               </div>
-              <div className="rounded bg-[#353534] p-6 min-w-54 max-w-54 flex flex-col items-center gap-2 text-sm">
-                <LucideLetterText className="fill-primary" />
-                <span>Teacher Dashboard</span>
-              </div>
-              <div className="rounded bg-[#353534] p-6 min-w-54 max-w-54 flex flex-col items-center gap-2 text-sm">
-                <LucideUsers className="fill-primary" />
-                <span>Success Rate</span>
-              </div>
+              <ChevronDown className="text-[#202430] cursor-pointer" size={20} />
             </div>
+
+            {/* Submit Button */}
+            <button className="bg-[#4640DE] hover:bg-[#3b36be] transition-colors text-white font-semibold px-10 py-4 w-full lg:w-auto mt-2 lg:mt-0 whitespace-nowrap">
+              Search my job
+            </button>
           </div>
-        </Container>
-      </div>
+
+          {/* Popular Tags */}
+          <p className="mt-6 text-[#515B6F] text-[16px]">
+            <span className="text-[#202430] font-medium opacity-70">Popular :</span> UI Designer, UX Researcher, Android, Admin
+          </p>
+        </div>
+
+        {/* Right Column: Images */}
+        <div className="lg:col-span-5 hidden lg:flex relative w-full h-[600px] lg:h-[750px] justify-center items-end z-20">
+          
+          {/* Profile Image */}
+          <div className="relative w-full h-full flex justify-end items-end z-10 translate-x-12">
+            <Image
+              src="/Pic.png" 
+              alt="Smiling professional" 
+              width={1000}
+              height={1000}
+              priority
+              className="w-auto h-[92%] object-contain drop-shadow-2xl"
+            />
+          </div>
+        </div>
+      </main>
+
+      {/* Decorative Bottom Diagonal Overlay (White) */}
+      <div 
+        className="absolute bottom-0 right-0 w-[45%] h-[250px] lg:h-[350px] bg-white z-10 pointer-events-none"
+        style={{ clipPath: 'polygon(100% 0, 0% 100%, 100% 100%)' }}
+      ></div>
+
     </div>
   );
 }

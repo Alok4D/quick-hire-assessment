@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#202430] w-full flex justify-center items-center">
       {/* Main container */}
-      <div className="max-w-[1192px] w-full px-6 md:px-8 py-12 flex flex-col justify-center">
+      <div className="max-w-[1192px] w-full lg:px-0 md:px-8 py-12 flex flex-col justify-center">
         
         {/* Top Content Area */}
         <div className="flex flex-col gap-10 lg:grid lg:grid-cols-12 lg:gap-8 pt-4">
