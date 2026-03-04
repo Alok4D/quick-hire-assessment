@@ -1,4 +1,3 @@
-
 import Intro from "./_components/Intro";
 import Image from "next/image";
 import Footer from "./_components/Footer";

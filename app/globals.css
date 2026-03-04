@@ -11,6 +11,7 @@
   --font-mono: var(--font-geist-mono);
   --font-Epilogue: var(--font-Epilogue);
   --font-Clash: "Clash Display", sans-serif;
+  --font-RedHat: var(--font-RedHat);
   --font-title: var(--font-title);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -99,4 +100,7 @@ h5,
 h6 {
   font-family: var(--font-title);
   font-weight: 700;
+}
+body, a{
+  cursor: pointer;
 }
