@@ -16,7 +16,7 @@ export default function Footer() {
             <div className="flex items-center gap-3">
               {/* Custom CSS Logo */}
             <Image src="/footer-image/footer-logo.svg" alt="Footer Logo" width={32} height={32} />
-              <span className="text-white text-[22px] font-bold tracking-wide">
+              <span className="text-[#FFFFFF] font-RedHat text-[24px] font-semibold tracking-wide leading-[150%] letter-spacing-[-0.01em]">
                 QuickHire
               </span>
             </div>
@@ -63,14 +63,14 @@ export default function Footer() {
               The latest job news, articles, sent to your inbox weekly.
             </p>
             
-            {/* Form: Stacked on mobile, inline on desktop */}
-            <div className="flex flex-col sm:flex-row w-full shadow-sm gap-4 sm:gap-0">
+            {/* Form: Stacked on mobile, inline on desktop with a gap */}
+            <div className="flex flex-col sm:flex-row w-full gap-1 font-Epilogue">
               <input 
                 type="email" 
                 placeholder="Email Address" 
-                className="w-full px-4 py-3 bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#4640DE]/50"
+                className="w-full px-4 py-3 bg-white text-gray-900 placeholder:text-[#A9B1C0] focus:outline-none focus:ring-0 border-none rounded-none"
               />
-              <button className="bg-[#4640DE] hover:bg-[#3b36be] transition-colors text-white font-semibold px-6 py-3 whitespace-nowrap w-fit sm:w-auto">
+              <button className="bg-[#4640DE] hover:bg-[#3b36be] transition-colors text-white font-semibold px-8 py-3 whitespace-nowrap w-full sm:w-auto rounded-none">
                 Subscribe
               </button>
             </div>
